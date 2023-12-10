@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .b-example-divider {
+            width: 100%;
+            height: 0.5rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, .1), inset 0 0.125em 0.5em rgba(0, 0, 0, .15);
+        }
+
+        .col-md-1 {
+            flex: 0 0 auto;
+            width: 4.333333%;
+        }
+
+        .py-lg-5 {
+            padding-top: 0rem !important;
+            padding-bottom: 0rem !important;
+        }
+
+        .float-lg-end {
+            padding-top: 4em;
+            padding-right: 1em;
+        }
+
+        h5 {
+            margin-top: 4px;
+        }
+
+        .card-registration .select-input.form-control[readonly]:not([disabled]) {
+            font-size: 1rem;
+            line-height: 2.15;
+            padding-left: .75em;
+            padding-right: .75em;
+        }
+
+        .card-registration .select-arrow {
+            top: 13px;
+        }
+
+        /* Importing fonts from Google */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        /* Reseting */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* body {
+    background: linear-gradient(45deg, #ce1e53, #8f00c7);
+    min-height: 100vh;
+} */
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 30px 45px;
+            box-shadow: 5px 25px 35px #3535356b;
+        }
+
+        .wrapper label {
+            display: block;
+            padding-bottom: 0.2rem;
+        }
+
+        .wrapper .form .row {
+            padding: 0.6rem 0;
+        }
+
+        .wrapper .form .row .form-control {
+            box-shadow: none;
+        }
+
+        .wrapper .form .option {
+            position: relative;
+            padding-left: 20px;
+            cursor: pointer;
+        }
+
+        .wrapper .form .option input {
+            opacity: 0;
+        }
+
+        .wrapper .form .checkmark {
+            position: absolute;
+            top: 1px;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            border: 1px solid #bbb;
+            border-radius: 50%;
+        }
+
+        .wrapper .form .option input:checked~.checkmark:after {
+            display: block;
+        }
+
+        .wrapper .form .option:hover .checkmark {
+            background: #f3f3f3;
+        }
+
+        .wrapper .form .option .checkmark:after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            display: block;
+            background: linear-gradient(45deg, #ce1e53, #8f00c7);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: 300ms ease-in-out 0s;
+        }
+
+        .wrapper .form .option input[type="radio"]:checked~.checkmark {
+            background: #fff;
+            transition: 300ms ease-in-out 0s;
+        }
+
+        .wrapper .form .option input[type="radio"]:checked~.checkmark:after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        #sub {
+            display: block;
+            width: 100%;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        #sub:focus {
+            outline: none;
+        }
+
+        @media(max-width: 768.5px) {
+            .wrapper {
+                margin: 30px;
+            }
+
+            .wrapper .form .row {
+                padding: 0;
+            }
+        }
+
+        @media(max-width: 400px) {
+            .wrapper {
+                padding: 25px;
+                margin: 20px;
+            }
+        }
+        .wrapper {
+            max-width: 448px;
+            margin: 57px auto;
+            padding: 30px 24px;
+            box-shadow: 5px 25px 35px #3535356b;
+        }
+
+        /* .row>* {
+            flex-shrink: 0;
+            width: 40%;
+        } */
+    </style>
+</head>
+</script>
+
+<body>
+    <div class="logo">
+        <img src="adv_img.png" class="img-fluid" alt="logo" height="300" width="300"
+            class="d-inline-block align-text-top">
+        <div class="float-lg-end">E-mail: advancecomp2016@gmail.com<br>
+            Mob: 9373106604</div><br>
+    </div>
+    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary" style="background-color: #e3f2fd;" data-bs-theme="light">
+        <div class="container-fluid">
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="navbar-collapse collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">Courses</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="programming.html">Programming</a></li>
+                            <li><a class="dropdown-item" href="basic.html">Basic</a></li>
+                            <li><a class="dropdown-item" href="designing.html">Designing</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="admission.html">Admission</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="videos.html">Videos</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Online Exam</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="services.html">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="enquiry.html">Enquiry Form</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html">
+                        <button class="btn btn-outline-primary" type="submit" fdprocessedid="44xum6">Log Out</button></a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit" fdprocessedid="44xum6">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+    <div class="b-example-divider"></div>
+    <section class="py-4 text-center bg-body-secondary">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class=" fw-dark text-black">STUDENT ENQUIRY FORM</h1>
+                <hr class="border border-black border-2 opacity-50">
+            </div>
+        </div>
+    <form class="row g-5 needs-validation" novalidate>
+        <div class="wrapper rounded bg-white">
+            <div class="h3 text-start">ENQUIRE NOW</div>
+            <div class="form">
+                <div class="row g-3">
+                    <div class="col">
+                        <label for="validationDefault01"></label>
+                        <input type="text" class="form-control" id="validationDefault01" id="validationDefault01"
+                            required placeholder="Enter Name*" aria-label="First name">
+                        <div class="invalid-feedback">
+                            Please enter your name.
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="validationDefault02"></label>
+                        <input type="text" class="form-control" id="validationDefault02" required
+                            placeholder="Enter Email Address*" aria-label="Last name">
+                        <div class="invalid-feedback">
+                            Please enter your Email.
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col">
+                        <label for="validationDefault03" class="form-label"></label>
+                        <input type="text" class="form-control" id="validationDefault03" required
+                            placeholder="Enter Mobile Number*">
+                        <div class="invalid-feedback">
+                            Please enter Mobile.
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col">
+                        <label for="validationDefault04" class="form-label"></label>
+                        <select id="validationDefault04" required class="form-select">
+                            <option value="" selected hidden>Select State*</option>
+                            <option>Andaman and Nicobar</option>
+                            <option>Andhra Pradesh</option>
+                            <option>Arunachal Pradesh</option>
+                            <option>Assam</option>
+                            <option>Bihar</option>
+                            <option>Chandigarh</option>
+                            <option>Chhattisgarh</option>
+                            <option>Dadra And Nagar Haveli</option>
+                            <option>Daman And Diu</option>
+                            <option>Delhi</option>
+                            <option>Goa</option>
+                            <option>Gujarat</option>
+                            <option>Haryana</option>
+                            <option>Himachal Pradesh</option>
+                            <option>Jammu and Kashmir</option>
+                            <option>Jharkhand</option>
+                            <option>Karnataka</option>
+                            <option>Kerala</option>
+                            <option>Madhya Pradesh</option>
+                            <option>Maharashtra</option>
+                            <option>Manipur</option>
+                            <option>Meghalaya</option>
+                            <option>Nagaland</option>
+                            <option>Odisha</option>
+                            <option>Puducherry</option>
+                            <option>Punjab</option>
+                            <option>Rajasthan</option>
+                            <option>Sikkim</option>
+                            <option>Tamil Nadu</option>
+                            <option>Telangana</option>
+                            <option>Tripura</option>
+                            <option>Uttar Pradesh</option>
+                            <option>West Bengal</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select state.
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="validationDefault05" class="form-label"></label>
+                        <select id="validationDefault05" required aria-placeholder="Select City" class="form-select">
+                            <option value="" selected hidden>Select City*</option>
+                            <option>Abhayapuri</option>
+                            <option>Alisinga</option>
+                            <option>Agomani</option>
+                            <option>Amguri</option>
+                            <option>Arikuchi</option>
+                            <option>Baganpara</option>
+                            <option>Baharihat</option>
+                            <option>Bajali</option>
+                            <option>Baksa</option>
+                            <option>Baramchari</option>
+                            <option>Behali</option>
+                            <option>Belsor</option>
+                            <option>Cachar</option>
+                            <option>Chaibari</option>
+                            <option>Chandrapur Bagicha</option>
+                            <option>Dalgaon</option>
+                            <option>Darrang</option>
+                            <option>Dhula</option>
+                            <option>Duni</option>
+                            <option>Nagpur</option>
+                            <option>Mumbai</option>
+                            <option>Suradi</option>
+                            <option>Tezpur</option>
+                            <option>Margherita</option>
+                            <option>Mazbaty</option>
+                            <option>Nagaon</option>
+                            <option>Nalbari</option>
+                            <option>Panchgram</option>
+                            <option>Pathali Pahar</option>
+                            <option>Phakum Kumar Phodia</option>
+                            <option>Rangjuli</option>
+                            <option>Sanekuchi</option>
+                            <option>Sidli</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select city.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" my-md-2 my-3">
+                <label for="validationDefault07" class="form-label"></label>
+                <select id="validationDefault07" required class="form-select">
+                    <option value="" selected hidden>Select Course*</option>
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please fill out this field.
+                </div>
+            </div>
+            <div class=" my-md-2 my-3">
+                <label for="validationDefault08" class="form-label"></label>
+                <select id="validationDefault08" required class="form-select">
+                    <option value="" selected hidden>Select Qualification*</option>
+                    <option value="10th">10th</option>
+                    <option value="12th">12th</option>
+                    <option value="UG">UG</option>
+                    <option value="PG">PG</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please fill out this field.
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <div class="col">
+                    <form class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <button class="btn btn-outline-primary" type="submit" fdprocessedid="44xum6">Submit
+                            form</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </form>
+    </section>
+        <div class="b-example-divider"></div>
+        <section class="bg-body-tertiary">
+            <div class="container">
+                <footer class="py-5">
+                    <div class="row">
+                        <div
+                            class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top border-black border-3">
+                        </div>
+                        <div class="col-6 col-md-1 mb-1"></div>
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>Programming & Database in</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">C/C++</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 text-body-secondary">Java(Core+Adv.)</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Data
+                                        Structure</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Visual
+                                        Basic</a></li>
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 text-body-secondary">Oracle</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">SQL
+                                        Server</a></li>
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 text-body-secondary">Android</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 text-body-secondary">Python</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>Web Designing in</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 text-body-secondary">HTML/CSS</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 text-body-secondary">Javascript/XML</a></li>
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 text-body-secondary">FrontPage</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">PHP &
+                                        MySQL</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">PHP
+                                        Framework</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>.Net</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 text-body-secondary">VB.Net</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">ASP
+                                        .Net</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">C#
+                                        .Net</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> SQL
+                                        Server</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Advance
+                                        .Net</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>Basic Courses</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 text-body-secondary">MS-CIT</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 text-body-secondary">MS-Office</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Interview
+                                        Skills</a></li>
+                                <li class="nav-item mb-2"><a href="#"
+                                        class="nav-link p-0 text-body-secondary">Personality
+                                        Development</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Tally 9
+                                        ERP</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Costing &
+                                        Auditing</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <div
+                                class="border border-black border-3 bg-dark-subtle text-black rounded-pill fs-5 text-center">
+                                <h5>VIEW ON MAPS</h5>
+                            </div>
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.494052583618!2d79.11967847479883!3d21.132728084200423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c72f0ff6b443%3A0xaf1c089e84499529!2sAdvance%20Infotech!5e0!3m2!1sen!2sin!4v1697809327986!5m2!1sen!2sin"
+                                    width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top border-black border-3">
+                        </div>
+                </footer>
+            </div>
+        </section>
+
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+            })()
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+
+</body>
